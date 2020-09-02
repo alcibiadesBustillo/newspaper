@@ -12,7 +12,8 @@ class Article(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
         get_user_model(),
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        blank=True
     )
 
     def __str__(self):
